@@ -3,17 +3,52 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "prepare": "panda codegen && husky",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
   "dependencies": {
+    "@ark-ui/solid": "^3.9.0",
     "@astrojs/check": "^0.9.3",
     "@astrojs/netlify": "^5.5.1",
+    "@astrojs/solid-js": "^4.4.1",
     "astro": "^4.14.5",
     "firebase-tools": "^13.15.4",
-    "typescript": "^5.5.4"
+    "lucide-astro": "^0.436.0",
+    "lucide-solid": "^0.436.0",
+    "solid-js": "^1.8.21",
+    "typescript": "^5.5.4",
+    "utility-types": "^3.11.0"
+  },
+  "devDependencies": {
+    "@pandacss/dev": "^0.45.1",
+    "@park-ui/panda-preset": "^0.42.0",
+    "@typescript-eslint/eslint-plugin": "^8.2.0",
+    "@typescript-eslint/parser": "^8.2.0",
+    "eslint": "^9.9.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint-plugin-solid": "^0.14.2",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.9"
   }
 }
