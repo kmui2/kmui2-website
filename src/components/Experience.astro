@@ -1,0 +1,20 @@
+---
+import { Heading } from '~/components/park-ui/heading';
+import { HStack, Stack } from '~/styled-system/jsx';
+
+import { css } from '~/styled-system/css';
+import { Text } from './park-ui/text';
+
+const { title, company, period, location, description } = Astro.props;
+---
+
+<HStack>
+  <Stack>
+    <Heading as="h2" size="3xl">{company}</Heading>
+    <Heading as="h3" size="xl" color="gray">{location} | {period}</Heading>
+  </Stack>
+  <Stack>
+    <Heading as="h2" size="3xl">{title}</Heading>
+    <Heading as="h3" size="xl" color="gray">{description}</Heading>
+  </Stack>
+</HStack>
