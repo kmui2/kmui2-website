@@ -29,3 +29,8 @@ styled-system-studio
 ## Panda
 ./src/styled-system
 ./src/styled-system-studio
+
+.vscode
+
+# Local Netlify folder
+.netlify
