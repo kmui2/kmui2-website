@@ -1,6 +1,6 @@
 import { Heading } from '~/components/park-ui/heading';
 import { Text } from '~/components/park-ui/text';
-import { Box, HStack, Stack, styled } from '~/styled-system/jsx';
+import { Box, HStack, LinkOverlay, Stack, styled } from '~/styled-system/jsx';
 
 import { GlobeIcon, MailIcon, MoonIcon, PhoneIcon, X } from 'lucide-solid';
 import type { Component } from 'solid-js';
@@ -8,6 +8,8 @@ import avatarImage from '~/assets/avatar.jpg';
 import { Link } from '~/components/park-ui/link';
 import { css } from '~/styled-system/css';
 import { SiGithub, SiLinkedin, SiStackoverflow, SiTwitter } from 'solid-icons/si';
+import { Button } from './park-ui/button';
+import { IoDocument } from 'solid-icons/io';
 
 const iconMargin = 1;
 
@@ -72,6 +74,12 @@ const LeftPanel: Component = () => {
         <MoonIcon />
         <Text>Dark</Text>
       </HStack>
+      <Box>
+        <Button variant="outline">
+          <IoDocument />
+          <LinkOverlay href="/resume.pdf">Resume</LinkOverlay>
+        </Button>
+      </Box>
     </Stack>
   );
 };
