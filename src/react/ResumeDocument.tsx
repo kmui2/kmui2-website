@@ -102,6 +102,13 @@ const Header: FunctionComponent<{
   );
 };
 
+const d = new Date();
+const month = d.getMonth() + 1;
+const date = d.getDate();
+const year = d.getFullYear();
+
+const formattedDate = `${month}.${date}.${year}`;
+
 const ResumeDocument = () => {
   return (
     <Document
@@ -240,6 +247,11 @@ const ResumeDocument = () => {
             </View>
           </BulletPoint>
         </Section>
+        <View style={{ marginTop: 'auto', flexDirection: 'row', width: '100%' }}>
+          <Text style={{ marginLeft: 'auto', fontSize: 10, fontStyle: 'italic' }}>
+            {formattedDate}
+          </Text>
+        </View>
       </Page>
     </Document>
   );

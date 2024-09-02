@@ -6,9 +6,19 @@ import ResumeDocument from '~/react/ResumeDocument';
 import { DownloadIcon } from 'lucide-react';
 import { button } from '~/styled-system/recipes';
 
+const d = new Date();
+const month = d.getMonth() + 1;
+const date = d.getDate();
+const year = d.getFullYear();
+
+const formattedDate = `${month}-${date}-${year}`;
+
 const ResumeDownloadLink: FunctionComponent = () => {
   return (
-    <PDFDownloadLink document={<ResumeDocument />} fileName="KevinMui_Resume.pdf">
+    <PDFDownloadLink
+      document={<ResumeDocument />}
+      fileName={`KevinMui_Resume_${formattedDate}.pdf`}
+    >
       <button className={button({ variant: 'solid' })}>
         <DownloadIcon />
         Download
