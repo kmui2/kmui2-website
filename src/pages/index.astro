@@ -12,17 +12,8 @@ const iconMargin = 1;
 
 <Layout title="Kevin Mui">
   <div class={center()}>
-    <div class={box({ maxW: '6xl', mt: 16 })}>
-      <div class={grid({ gridTemplateColumns: '1fr 2fr', w: 'full', hideBelow: 'md' })}>
-        <div class={stack()}>
-          <LeftPanel client:load transition:name="left-panel" />
-        </div>
-        <Stack>
-          <Experience client:load transition:name="experience" />
-          <Skills client:load transition:name="skills" />
-        </Stack>
-      </div>
-      <div class={stack({ w: 'full', hideFrom: 'md' })}>
+    <div class={box({ maxW: '6xl', p: 16 })}>
+      <div class={grid({ gridTemplateColumns: { md: '1fr 2fr' }, w: 'full' })}>
         <div class={stack()}>
           <LeftPanel client:load transition:name="left-panel" />
         </div>

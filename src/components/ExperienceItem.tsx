@@ -20,13 +20,20 @@ const ExperienceItem: Component<{
   techStack?: { icon?: Component; label: string }[];
 }> = (props) => {
   return (
-    <Grid gridTemplateColumns="20% min-content auto" w="full">
-      <Stack textAlign="right">
-        <Heading as="h3" size="xs" lineHeight="1.875rem" fontWeight="bold" mt="0.75rem">
+    <Grid gridTemplateColumns={{ base: 'auto', md: 'min-content min-content auto' }} w="full">
+      <Stack textAlign="right" hideBelow="md">
+        <Heading
+          as="h3"
+          size="xs"
+          textWrap="nowrap"
+          lineHeight="1.875rem"
+          fontWeight="bold"
+          mt="0.75rem"
+        >
           {props.period}
         </Heading>
       </Stack>
-      <Stack align="center" gap={0}>
+      <Stack align="center" gap={0} hideBelow="md">
         <Box border="solid 1px" borderColor="border.muted" w="0" h="0.75rem" />
         <Center w="1.5rem" h="1.5rem">
           <Circle bg="fg.muted" size="0.5rem" />
@@ -52,7 +59,10 @@ const ExperienceItem: Component<{
                 </Text>
               </Heading>
               <Heading as="h3" size="sm" color="fg.muted">
-                {props.location}
+                {props.location}{' '}
+              </Heading>
+              <Heading mt={1} as="h4" size="xs" color="fg.muted" hideFrom="md">
+                {props.period}
               </Heading>
             </Stack>
             <Stack gap={1}>

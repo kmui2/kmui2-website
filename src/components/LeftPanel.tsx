@@ -18,7 +18,7 @@ const LeftPanel: Component = () => {
   const [isRouting, setIsRouting] = createSignal(false);
 
   return (
-    <Stack>
+    <Stack align={{ base: 'center', md: 'start' }}>
       <Box p={2} w="max" h="max" border="solid" borderColor="red.9" borderWidth={1}>
         <Box bg="black" p={5} borderRadius="xl">
           <styled.img
@@ -28,7 +28,7 @@ const LeftPanel: Component = () => {
           />
         </Box>
       </Box>
-      <Stack gap={0}>
+      <Stack gap={0} align={{ base: 'center', md: 'start' }}>
         <Heading as="h1" size="4xl" fontWeight="bold">
           Kevin Mui
         </Heading>
@@ -36,7 +36,7 @@ const LeftPanel: Component = () => {
           Software Engineer / Full Stack Engineer
         </Heading>
       </Stack>
-      <Stack gap={0}>
+      <Stack gap={0} align={{ base: 'center', md: 'start' }}>
         <HStack gap={2} color="fg.muted" alignItems="center">
           <GlobeIcon size="0.75rem" />
           <Text color="fg.muted" size="sm">
@@ -64,7 +64,7 @@ const LeftPanel: Component = () => {
       <Heading as="h1" size="4xl" fontWeight="bold">
         About
       </Heading>
-      <Text size="sm" color="neutral.11">
+      <Text size="sm" color="neutral.11" textAlign={{ base: 'center', md: 'start' }}>
         As a seasoned Software Engineer with 8 years of senior level experience, specializing in
         fintech, Java backend, and React frontend development, I have a proven track record of
         designing and implementing high-volume risk management applications. During my tenure at CME
