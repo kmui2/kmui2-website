@@ -65,12 +65,10 @@ const LeftPanel: Component = () => {
         About
       </Heading>
       <Text size="sm" color="neutral.11" textAlign={{ base: 'center', md: 'start' }}>
-        As a seasoned Software Engineer with 8 years of senior level experience, specializing in
-        fintech, Java backend, and React frontend development, I have a proven track record of
-        designing and implementing high-volume risk management applications. During my tenure at CME
-        Group for over 5 years, I honed my skills in developing cutting-edge solutions on Google
-        Cloud Platform (GCP). I bring a unique blend of technical expertise and industry-specific
-        knowledge that enables me to drive innovation and deliver exceptional results.
+        As a seasoned Software Engineer with 8 years of industry experience, I am a seasoned
+        Software Engineer with 8 years of experience in fintech, Java backend, and React full-stack
+        development. At CME Group, I developed high-volume risk management app on Google Cloud
+        Platform (GCP), improving optimization and fault tolerance.
       </Text>
 
       {/* <HStack alignItems="center">
