@@ -2,7 +2,8 @@
 /* eslint-disable solid/style-prop */
 /* eslint-disable solid/no-destructure */
 import { Document, Font, Link, PDFViewer, Page, Text, View } from '@react-pdf/renderer';
-import { CircleDot, Github, Layers, Linkedin, MailIcon, Phone } from 'lucide-react';
+import { CircleDot, MailIcon, Phone, Globe } from 'lucide-react';
+import { SiGithub, SiLinkedin, SiStackoverflow } from '@icons-pack/react-simple-icons';
 import type { FunctionComponent, PropsWithChildren, ReactNode } from 'react';
 import ReactPdfSvg from './ReactPdfSvg';
 import content from './content.yaml';
@@ -32,7 +33,7 @@ const Heading1: FunctionComponent<PropsWithChildren> = ({ children }) => {
 };
 
 const Heading2: FunctionComponent<PropsWithChildren> = ({ children }) => {
-  return <Text style={{ fontSize: 15, fontWeight: 'bold' }}>{children}</Text>;
+  return <Text style={{ fontSize: 13, fontWeight: 'bold' }}>{children}</Text>;
 };
 
 const Heading3: FunctionComponent<PropsWithChildren> = ({ children }) => {
@@ -71,7 +72,7 @@ const Handle: FunctionComponent<PropsWithChildren<{ src?: string; icon: ReactNod
 const BulletPoint: FunctionComponent<PropsWithChildren> = ({ children }) => {
   return (
     <View style={{ flexDirection: 'row' }}>
-      <View style={{ width: '5%', paddingTop: 5 }}>
+      <View style={{ width: '4%', paddingTop: 5 }}>
         <ReactPdfSvg>
           <CircleDot size={4} />
         </ReactPdfSvg>
@@ -94,8 +95,8 @@ const Header: FunctionComponent<{
         <Heading3>{role}</Heading3>
       </View>
       <View style={{ flexDirection: 'column', alignItems: 'flex-end' }}>
-        <Heading2>{period}</Heading2>
-        <Heading3>{location}</Heading3>
+        <Heading2>{location}</Heading2>
+        <Heading3>{period}</Heading3>
       </View>
     </View>
   );
@@ -103,7 +104,7 @@ const Header: FunctionComponent<{
 
 export const MyDocument = () => {
   return (
-    <Document>
+    <Document title="Kevin_Mui_Resume">
       <Page
         size="A4"
         style={{
@@ -116,7 +117,7 @@ export const MyDocument = () => {
         }}
       >
         <View style={{ fontSize: 35 }}>
-          <Text style={{ fontWeight: 'bold' }}>Kevin Mui</Text>
+          <Text style={{ fontWeight: 'bold' }}>KEVIN MUI</Text>
         </View>
 
         <View
@@ -125,34 +126,42 @@ export const MyDocument = () => {
             alignItems: 'center',
             justifyContent: 'center',
             gap: 10,
+            flexWrap: 'wrap',
           }}
         >
           <Handle
             src="mailto:kevinmui1997@yahoo.com"
-            icon={<MailIcon color="white" fill="red" size={15} />}
+            icon={<MailIcon color="white" fill="black" size={15} />}
           >
             <Text>kevinmui1997@yahoo.com</Text>
           </Handle>
 
           <Handle
             src="https://stackoverflow.com/users/8109319/kmui2"
-            icon={<Layers fill="orange" size={10} />}
+            icon={<SiStackoverflow fill="black" size={10} />}
           >
-            <Text>stackoverflow/kmui2</Text>
+            <Text>@kmui2</Text>
           </Handle>
 
           <Handle
             src="https://www.linkedin.com/in/kmui2/"
-            icon={<Linkedin fill="blue" size={10} />}
+            icon={<SiLinkedin fill="black" size={10} />}
           >
-            <Text>linkedin/kmui2</Text>
+            <Text>@kmui2</Text>
           </Handle>
 
           <Handle
             src="https://github.com/kmui2/"
-            icon={<Github fill="black" color="black" size={10} />}
+            icon={<SiGithub fill="black" color="black" size={10} />}
           >
-            <Text>github/kmui2</Text>
+            <Text>@kmui2</Text>
+          </Handle>
+
+          <Handle
+            src="https://kmui2.netlify.app/"
+            icon={<Globe size={10} color="black" fill="white" />}
+          >
+            <Text>kmui2.netlify.app</Text>
           </Handle>
 
           <Handle src="tel:920-750-2164" icon={<Phone fill="green" size={10} />}>
@@ -178,7 +187,7 @@ export const MyDocument = () => {
                 period={exp.period}
                 location={exp.location}
               />
-              <View style={{ paddingLeft: 20, paddingRight: 20 }}>
+              <View style={{ paddingLeft: 10, paddingRight: 10 }}>
                 {exp.points.map((point, i) => (
                   <BulletPoint key={i}>
                     <Text style={{ fontSize: 12 }}>{point}</Text>
@@ -192,32 +201,39 @@ export const MyDocument = () => {
           <Heading1>SKILLS</Heading1>
           {content.techStack && (
             <BulletPoint>
-              <Text style={{ fontSize: 12 }}>
-                <Text
-                  style={{
-                    // fontWeight: 'bold',
-                    textDecoration: 'underline',
-                  }}
-                >
-                  Tech Stack:
-                </Text>{' '}
-                {content.techStack}
-              </Text>
+              <View>
+                <View style={{ fontWeight: 'bold' }}>
+                  <Text
+                    style={{
+                      // React PDF has a bug where bold is applied to the whole text
+                      fontSize: 12,
+                      fontWeight: 'bold',
+                      textDecoration: 'underline',
+                    }}
+                  >
+                    Tech Stack:
+                  </Text>
+                </View>{' '}
+                <Text style={{ fontSize: 12 }}>{content.techStack}</Text>
+              </View>
             </BulletPoint>
           )}
           <BulletPoint>
-            <Text style={{ fontSize: 12 }}>
-              <Text
-                style={{
-                  // React PDF has a bug where bold is applied to the whole text
-                  // fontWeight: 'bold'
-                  textDecoration: 'underline',
-                }}
-              >
-                Skills:
-              </Text>{' '}
-              {content.skills}
-            </Text>
+            <View>
+              <View style={{ fontWeight: 'bold' }}>
+                <Text
+                  style={{
+                    // React PDF has a bug where bold is applied to the whole text
+                    fontSize: 12,
+                    fontWeight: 'bold',
+                    textDecoration: 'underline',
+                  }}
+                >
+                  Skills:
+                </Text>
+              </View>{' '}
+              <Text style={{ fontSize: 12 }}>{content.skills}</Text>
+            </View>
           </BulletPoint>
         </Section>
       </Page>

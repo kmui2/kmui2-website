@@ -8,12 +8,12 @@ experience:
     period: 'Jun 2019 - Present'
     location: 'Chicago, IL'
     points:
-      - Developed high-volume risk management apps in Java Spring and JavaScript for CME Clearing House and quants, focusing on margining, pricing, and asset type calculations.
+      - Developed high-volume risk management apps in Java Spring for CME Clearing House and quants, focusing on margining, pricing, and asset type calculations.
       - Led the migration of 5+ on-prem Java microservices to Google Cloud Platform (GCP) as cloud-first initiative.
-      - Achieved a 30% reduction in on-call incidents by implementing failover strategies across multiple regional zones.
       - Adopted Infrastructure as Code, increasing deployment frequency from every 3 months to weekly, saving 8 hours per deployment.
       - Optimized memory usage by 20% through the implementation of distributed database caching and batch processing.
       - Introduced end-to-end testing on daily microservice builds, reducing production bugs by 40% and ensure meeting daily cycle SLAs on time.
+      - Achieved a 30% reduction in on-call incidents by implementing failover strategies across multiple regional zones.
 
   - title: 'Full Stack Engineer (Part-time)'
     company: 'DataChat Inc.'
