@@ -1,0 +1,39 @@
+techStack: Java, Spring, SQL, Python, JavaScript, TypeScript, GCP, Docker, Kubernetes, Linux, Postgres, Cassandra, Redis, Oracle, Kafka, React, Redux, Node.js, React Native, AWS, Azure, Git
+
+skills: CI/CD, Cloud, Microservices, RESTful API, Automation, Load Balancing, Scrum, Agile, Jira, Design Patterns, Scalability, Data Structures, Algorithms, Software Development Lifecycle, Splunk, Argo, Communication, MVC, Performance Testing
+
+experience:
+  - title: 'Software Engineer III'
+    company: 'CME Group'
+    period: 'Jun 2019 - Present'
+    location: 'Chicago, IL'
+    points:
+      - Developed high-volume risk management apps in Java Spring and JavaScript for CME Clearing House and quants, focusing on margining, pricing, and asset type calculations.
+      - Led the migration of 5+ on-prem Java microservices to Google Cloud Platform (GCP) as cloud-first initiative.
+      - Achieved a 30% reduction in on-call incidents by implementing failover strategies across multiple regional zones.
+      - Adopted Infrastructure as Code, increasing deployment frequency from every 3 months to weekly, saving 8 hours per deployment.
+      - Optimized memory usage by 20% through the implementation of distributed database caching and batch processing.
+      - Introduced end-to-end testing on daily microservice builds, reducing production bugs by 40% and ensure meeting daily cycle SLAs on time.
+
+  - title: 'Full Stack Engineer (Part-time)'
+    company: 'DataChat Inc.'
+    period: 'Sept 2017 - Sept 2021'
+    location: 'Madison, WI'
+    points:
+      - Architected a React chat app, integrating natural language processing for data analysis.
+      - Implemented an auto-suggestion UX powered by generative AI, enhancing responsiveness by 25%.
+      - Developed a Python data visualization backend, supporting over 10 chart types.
+
+  - title: 'Full Stack Engineer (Part-time)'
+    company: 'University of Wisconsin-Madison'
+    period: 'Sept 2016 - Mar 2024'
+    location: 'Madison, WI'
+    points:
+      - Developed web and mobile psychology experiments, collecting millions of data points for publications.
+
+  - title: 'Programmer Intern'
+    company: 'Acuity Insurance'
+    period: 'Jun 2018 - Aug 2018'
+    location: 'Sheboygan, WI'
+    points:
+      - Engineered a web app for customer data, improving page load by 70% compared to the legacy website.

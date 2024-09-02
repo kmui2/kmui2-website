@@ -9,6 +9,6 @@
       "styled-system/*": ["./src/styled-system/*"]
     }
   },
-  "include": ["src"],
-  "exclude": ["**/*.gen.ts"]
+  "include": ["src/**/*"],
+  "exclude": ["**/*.gen.ts", "src/react"]
 }

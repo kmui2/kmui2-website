@@ -1,4 +1,5 @@
-import '../.astro/types.d.ts';
+import '../.astro/types';
+
 declare module '*.ttf' {
   const src: string;
   export default src;
@@ -22,13 +23,4 @@ declare module '*/content.yaml' {
     }[];
   };
   export default content;
-}
-
-declare module 'react-solid-bridge' {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const SolidToReactBridgeProvider: any;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const convertToSolidComponent: any;
-
-  export { SolidToReactBridgeProvider, convertToSolidComponent };
 }

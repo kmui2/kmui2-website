@@ -2,18 +2,21 @@ import { Heading } from '~/components/park-ui/heading';
 import { Text } from '~/components/park-ui/text';
 import { Box, HStack, LinkOverlay, Stack, styled } from '~/styled-system/jsx';
 
-import { GlobeIcon, MailIcon, MoonIcon, PhoneIcon, X } from 'lucide-solid';
-import type { Component } from 'solid-js';
+import { GlobeIcon, MailIcon, MoonIcon, PhoneIcon } from 'lucide-solid';
+import { createSignal, Show, type Component } from 'solid-js';
 import avatarImage from '~/assets/avatar.jpg';
 import { Link } from '~/components/park-ui/link';
 import { css } from '~/styled-system/css';
 import { SiGithub, SiLinkedin, SiStackoverflow, SiTwitter } from 'solid-icons/si';
 import { Button } from './park-ui/button';
 import { IoDocument } from 'solid-icons/io';
+import { Spinner } from './park-ui/spinner';
 
 const iconMargin = 1;
 
 const LeftPanel: Component = () => {
+  const [isRouting, setIsRouting] = createSignal(false);
+
   return (
     <Stack>
       <Box p={2} w="max" h="max" border="solid" borderColor="red.9" borderWidth={1}>
@@ -75,9 +78,16 @@ const LeftPanel: Component = () => {
         <Text>Dark</Text>
       </HStack>
       <Box>
-        <Button variant="outline">
-          <IoDocument />
-          <LinkOverlay href="/resume.pdf">Resume</LinkOverlay>
+        <Button variant="outline" onClick={() => setIsRouting(true)}>
+          <Show when={!isRouting()} fallback={<Spinner />}>
+            <IoDocument />
+          </Show>
+          <LinkOverlay
+            //  href="/resume.pdf"
+            href="/resume"
+          >
+            Resume
+          </LinkOverlay>
         </Button>
       </Box>
     </Stack>

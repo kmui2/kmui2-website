@@ -21,12 +21,12 @@ const iconMargin = 1;
           <LeftPanel client:load transition:name="left-panel" />
           <!-- Test -->
           <!-- <SolidPDF client:only="solid-js" /> -->
-          <!-- <PDF client:only="react" /> -->
         </div>
-        <Stack>
-          <Experience client:load transition:name="experience" />
-          <Skills client:load transition:name="skills" />
-        </Stack>
+        <div class={css({ aspectRatio: '8.5 / 13' })}>
+          <PDF client:only="react" />
+          <!-- <Experience client:load transition:name="experience" /> -->
+          <!-- <Skills client:load transition:name="skills" /> -->
+        </div>
       </div>
     </div>
   </div>

@@ -1,0 +1,46 @@
+---
+import { Box, Center, Grid, Stack } from '~/styled-system/jsx';
+import Layout from '../layouts/Layout.astro';
+
+import { FaBrandsJava } from 'solid-icons/fa';
+import {
+  SiApachecassandra,
+  SiApachekafka,
+  SiGooglecloud,
+  SiOracle,
+  SiSpring,
+} from 'solid-icons/si';
+
+import ExperienceItem from '~/components/ExperienceItem';
+import LeftPanel from '~/components/LeftPanel';
+import Skills from '~/components/Skills';
+---
+
+<Layout title="Kevin Mui">
+  <Center>
+    <Box maxW="6xl" mt={16}>
+      <Grid gridTemplateColumns="1fr 2fr" w="full">
+        <LeftPanel client:load transition:name="left-panel" />
+        <Stack>
+          <ExperienceItem
+            title="Software Engineer III"
+            company="CME Group"
+            period="June 2019 - Present"
+            location="Chicago, IL - Hybrid"
+            description="Developed high-volume risk management apps in Java Spring and JavaScript for CME Clearing House and quants, focusing on margining, pricing, and asset type calculations."
+            techStack={[
+              { label: 'Java', icon: FaBrandsJava },
+              { label: 'Spring', icon: SiSpring },
+              { label: 'GCP', icon: SiGooglecloud },
+              { label: 'Oracle', icon: SiOracle },
+              { label: 'Cassandra', icon: SiApachecassandra },
+              { label: 'Kafka', icon: SiApachekafka },
+            ]}
+            transition:name="experience-hero"
+          />
+          <Skills client:load transition:name="skills" />
+        </Stack>
+      </Grid>
+    </Box>
+  </Center>
+</Layout>
