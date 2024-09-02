@@ -1,17 +1,17 @@
 /* eslint-disable solid/prefer-for */
 /* eslint-disable solid/style-prop */
 /* eslint-disable solid/no-destructure */
-import { Document, Font, Link, PDFViewer, Page, Text, View } from '@react-pdf/renderer';
-import { CircleDot, MailIcon, Phone, Globe } from 'lucide-react';
 import { SiGithub, SiLinkedin, SiStackoverflow } from '@icons-pack/react-simple-icons';
+import { Document, Font, Link, Page, Text, View } from '@react-pdf/renderer';
+import { CircleDot, Globe, MailIcon } from 'lucide-react';
 import type { FunctionComponent, PropsWithChildren, ReactNode } from 'react';
 import ReactPdfSvg from './ReactPdfSvg';
 import content from './content.yaml';
 
-import TinosRegular from '~/fonts/Tinos/Tinos-Regular.ttf';
-import TinosItalic from '~/fonts/Tinos/Tinos-Italic.ttf';
 import TinosBold from '~/fonts/Tinos/Tinos-Bold.ttf';
 import TinosBoldItalic from '~/fonts/Tinos/Tinos-BoldItalic.ttf';
+import TinosItalic from '~/fonts/Tinos/Tinos-Italic.ttf';
+import TinosRegular from '~/fonts/Tinos/Tinos-Regular.ttf';
 
 Font.register({
   family: 'Tinos',
@@ -102,9 +102,17 @@ const Header: FunctionComponent<{
   );
 };
 
-export const MyDocument = () => {
+const ResumeDocument = () => {
   return (
-    <Document title="Kevin_Mui_Resume">
+    <Document
+      title="KevinMui Resume"
+      author="Kevin Mui"
+      subject="Kevin Mui Resume"
+      creator="Kevin Mui"
+      keywords="Kevin Mui Resume"
+      producer="Kevin Mui"
+      language="en"
+    >
       <Page
         size="A4"
         style={{
@@ -237,14 +245,4 @@ export const MyDocument = () => {
   );
 };
 
-function App() {
-  return (
-    <PDFViewer
-      style={{ width: '100%', height: '100%', margin: 0, objectFit: 'contain', border: 0 }}
-    >
-      <MyDocument />
-    </PDFViewer>
-  );
-}
-
-export default App;
+export default ResumeDocument;

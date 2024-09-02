@@ -4,10 +4,12 @@ import Layout from '../layouts/Layout.astro';
 
 import { ArrowLeftIcon } from 'lucide-solid';
 import LeftPanel from '~/components/LeftPanel';
-import PDF from '~/react/PDF';
+import ResumeDownloadLink from '~/react/ResumeDownloadLink';
+import ResumeViewer from '~/react/ResumeViewer';
 import { css } from '~/styled-system/css';
-import { box, center, grid, stack } from '~/styled-system/patterns';
 import { Box, LinkOverlay } from '~/styled-system/jsx';
+import { box, center, grid, stack } from '~/styled-system/patterns';
+import { hstack } from '~/styled-system/patterns';
 ---
 
 <Layout title="Kevin Mui">
@@ -18,15 +20,18 @@ import { Box, LinkOverlay } from '~/styled-system/jsx';
           <LeftPanel client:load transition:name="left-panel" />
         </div>
         <div class={stack()}>
-          <Box>
-            <Button
-              ><ArrowLeftIcon /> Back
-              <LinkOverlay href="/" />
-            </Button>
-          </Box>
+          <div class={hstack()}>
+            <Box>
+              <Button variant="subtle"
+                ><ArrowLeftIcon /> Back
+                <LinkOverlay href="/" />
+              </Button>
+            </Box>
+            <ResumeDownloadLink client:only="react" />
+          </div>
 
           <div class={css({ aspectRatio: '8.5 / 13' })}>
-            <PDF client:only="react" />
+            <ResumeViewer client:only="react" />
           </div>
         </div>
       </div>
