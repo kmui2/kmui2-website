@@ -11,6 +11,8 @@ import { SiGithub, SiLinkedin, SiStackoverflow, SiTwitter } from 'solid-icons/si
 import { Button } from './park-ui/button';
 import { IoDocument } from 'solid-icons/io';
 import { Spinner } from './park-ui/spinner';
+import { IconButton } from './park-ui/icon-button';
+import { Icon } from './park-ui/icon';
 
 const iconMargin = 1;
 
@@ -54,12 +56,38 @@ const LeftPanel: Component = () => {
         </Link>
       </Stack>
       <HStack color="red.9">
-        <MailIcon size="1.25rem" class={css({ m: iconMargin })} />
-        <PhoneIcon size="1.25rem" class={css({ m: iconMargin })} />
-        <SiLinkedin size="1.25rem" class={css({ m: iconMargin })} />
-        <SiTwitter size="1.25rem" class={css({ m: iconMargin })} />
-        <SiGithub size="1.25rem" class={css({ m: iconMargin })} />
-        <SiStackoverflow size="1.25rem" class={css({ m: iconMargin })} />
+        <IconButton m={iconMargin} variant="link">
+          <MailIcon size="1.25rem" />
+          <LinkOverlay
+            href="mailto:kevinmui1997@yahoo.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          />
+        </IconButton>
+        <IconButton m={iconMargin} variant="link">
+          <PhoneIcon size="1.25rem" />
+          <LinkOverlay href="tel:920-750-2164" target="_blank" rel="noopener noreferrer" />
+        </IconButton>
+        <IconButton m={iconMargin} variant="link">
+          <SiLinkedin size="1.25rem" />
+          <LinkOverlay
+            href="https://www.linkedin.com/in/kmui2/"
+            target="_blank"
+            rel="noopener noreferrer"
+          />
+        </IconButton>
+        <IconButton m={iconMargin} variant="link">
+          <SiGithub size="1.25rem" />
+          <LinkOverlay href="https://github.com/kmui2/" target="_blank" rel="noopener noreferrer" />
+        </IconButton>
+        <IconButton m={iconMargin} variant="link">
+          <SiStackoverflow size="1.25rem" />
+          <LinkOverlay
+            href="https://stackoverflow.com/users/8109319/kmui2"
+            target="_blank"
+            rel="noopener noreferrer"
+          />
+        </IconButton>
       </HStack>
       <Heading as="h1" size="4xl" fontWeight="bold">
         About
