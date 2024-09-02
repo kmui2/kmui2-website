@@ -80,10 +80,7 @@ const LeftPanel: Component = () => {
           <Show when={!isRouting()} fallback={<Spinner />}>
             <IoDocument />
           </Show>
-          <LinkOverlay
-            //  href="/resume.pdf"
-            href="/resume"
-          >
+          <LinkOverlay href="/resume" data-astro-prefetch="load">
             Resume
           </LinkOverlay>
         </Button>

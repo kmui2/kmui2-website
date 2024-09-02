@@ -8,6 +8,7 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
   output: 'server',
+  prefetch: true,
   adapter: netlify(),
   integrations: [solidJs({ devtools: true, exclude: '**/react/*' }), react()],
   vite: {
