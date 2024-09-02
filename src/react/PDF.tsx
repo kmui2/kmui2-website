@@ -163,10 +163,6 @@ export const MyDocument = () => {
           >
             <Text>kmui2.netlify.app</Text>
           </Handle>
-
-          <Handle src="tel:920-750-2164" icon={<Phone fill="green" size={10} />}>
-            <Text>(920) 750-2164</Text>
-          </Handle>
         </View>
         <Section>
           <Heading1>EDUCATION</Heading1>

@@ -42,7 +42,6 @@ const LeftPanel: Component = () => {
         <HStack gap={2} color="fg.muted" alignItems="center">
           <GlobeIcon size="0.75rem" />
           <Text color="fg.muted" size="sm">
-            {' '}
             Chicago, IL
           </Text>
         </HStack>
@@ -63,10 +62,6 @@ const LeftPanel: Component = () => {
             target="_blank"
             rel="noopener noreferrer"
           />
-        </IconButton>
-        <IconButton m={iconMargin} variant="link">
-          <PhoneIcon size="1.25rem" />
-          <LinkOverlay href="tel:920-750-2164" target="_blank" rel="noopener noreferrer" />
         </IconButton>
         <IconButton m={iconMargin} variant="link">
           <SiLinkedin size="1.25rem" />
