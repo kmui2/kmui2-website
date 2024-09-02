@@ -1,31 +1,36 @@
 ---
-import { Box, Center, Grid, Stack } from '~/styled-system/jsx';
+import { Button } from '~/components/park-ui/button';
 import Layout from '../layouts/Layout.astro';
 
-import Experience from '~/components/Experience';
+import { ArrowLeftIcon } from 'lucide-solid';
 import LeftPanel from '~/components/LeftPanel';
-import Skills from '~/components/Skills';
+import PDF from '~/react/PDF';
 import { css } from '~/styled-system/css';
 import { box, center, grid, stack } from '~/styled-system/patterns';
-import SolidPDF from '~/components/SolidPDF';
-import PDF from '~/react/PDF';
-
-const iconMargin = 1;
+import { LinkOverlay } from '~/styled-system/jsx';
 ---
 
 <Layout title="Kevin Mui">
   <div class={center()}>
     <div class={box({ maxW: '6xl', mt: 16 })}>
-      <div class={grid({ gridTemplateColumns: '1fr 2fr', w: 'full' })}>
+      <div class={grid({ gridTemplateColumns: '1fr 2fr', w: 'full', hideBelow: 'md' })}>
         <div class={stack()}>
           <LeftPanel client:load transition:name="left-panel" />
-          <!-- Test -->
-          <!-- <SolidPDF client:only="solid-js" /> -->
+        </div>
+        <div class={css({ aspectRatio: '8.5 / 13' })}>
+          <Button
+            ><ArrowLeftIcon /> Back
+            <LinkOverlay href="/" />
+          </Button>
+          <PDF client:only="react" />
+        </div>
+      </div>
+      <div class={stack({ w: 'full', hideFrom: 'md' })}>
+        <div class={stack()}>
+          <LeftPanel client:load transition:name="left-panel" />
         </div>
         <div class={css({ aspectRatio: '8.5 / 13' })}>
           <PDF client:only="react" />
-          <!-- <Experience client:load transition:name="experience" /> -->
-          <!-- <Skills client:load transition:name="skills" /> -->
         </div>
       </div>
     </div>
