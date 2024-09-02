@@ -88,10 +88,10 @@ const LeftPanel: Component = () => {
         About
       </Heading>
       <Text size="sm" color="neutral.11" textAlign={{ base: 'center', md: 'start' }}>
-        As a seasoned Software Engineer with 8 years of industry experience, I am a seasoned
-        Software Engineer with 8 years of experience in fintech, Java backend, and React full-stack
-        development. At CME Group, I developed high-volume risk management app on Google Cloud
-        Platform (GCP), improving optimization and fault tolerance.
+        As a seasoned Software Engineer with 8 years of industry experience, I bring cloud
+        expertise, multi-threading concurrency strategies, and industry standards in fintech, Java
+        backend, and React full-stack development. At CME Group, I developed a high-volume risk
+        management app on Google Cloud Platform (GCP), improving optimization and fault tolerance.
       </Text>
 
       {/* <HStack alignItems="center">
