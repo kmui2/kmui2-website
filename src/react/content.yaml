@@ -1,6 +1,6 @@
 techStack: Java, Spring, SQL, Python, JavaScript, TypeScript, GCP, Docker, Kubernetes, Linux, Postgres, Cassandra, Redis, Oracle, Kafka, React, Redux, Node.js, React Native, AWS, Azure, Git
 
-skills: CI/CD, Cloud, Microservices, RESTful API, Automation, Load Balancing, Scrum, Agile, Jira, Design Patterns, Scalability, Data Structures, Algorithms, Software Development Lifecycle, Splunk, Argo, Communication, MVC, Performance Testing
+skills: CI/CD, Cloud, Microservices, RESTful API, Multi-threading, Concurrency, Trading, Batch, Automation, Load Balancing, Scrum, Agile, Jira, Design Patterns, Scalability, Data Structures, Algorithms, Software Development Lifecycle, Splunk, Argo, Communication, MVC, Performance Testing
 
 experience:
   - title: 'Software Engineer III'
@@ -10,8 +10,8 @@ experience:
     points:
       - Developed high-volume risk management apps in Java Spring for CME Clearing House and quants, focusing on margining, pricing, and asset type calculations.
       - Led the migration of 5+ on-prem Java microservices to Google Cloud Platform (GCP) as cloud-first initiative.
+      - Implemented batched multi-threading concurrency strategies and distributed database caching, optimizing data pipeline throughput by 20%.
       - Adopted Infrastructure as Code, increasing deployment frequency from every 3 months to weekly, saving 8 hours per deployment.
-      - Optimized memory usage by 20% through the implementation of distributed database caching and batch processing.
       - Introduced end-to-end testing on daily microservice builds, reducing production bugs by 40% and ensure meeting daily cycle SLAs on time.
       - Achieved a 30% reduction in on-call incidents by implementing failover strategies across multiple regional zones.
 
