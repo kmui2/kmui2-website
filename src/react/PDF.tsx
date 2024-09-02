@@ -213,7 +213,7 @@ export const MyDocument = () => {
                   >
                     Tech Stack:
                   </Text>
-                </View>{' '}
+                </View>
                 <Text style={{ fontSize: 12 }}>{content.techStack}</Text>
               </View>
             </BulletPoint>
@@ -231,7 +231,7 @@ export const MyDocument = () => {
                 >
                   Skills:
                 </Text>
-              </View>{' '}
+              </View>
               <Text style={{ fontSize: 12 }}>{content.skills}</Text>
             </View>
           </BulletPoint>

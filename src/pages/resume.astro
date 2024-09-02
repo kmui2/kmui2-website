@@ -7,22 +7,27 @@ import LeftPanel from '~/components/LeftPanel';
 import PDF from '~/react/PDF';
 import { css } from '~/styled-system/css';
 import { box, center, grid, stack } from '~/styled-system/patterns';
-import { LinkOverlay } from '~/styled-system/jsx';
+import { Box, LinkOverlay } from '~/styled-system/jsx';
 ---
 
 <Layout title="Kevin Mui">
   <div class={center()}>
-    <div class={box({ maxW: '6xl', mt: 16 })}>
+    <div class={box({ maxW: '6xl', p: 16 })}>
       <div class={grid({ gridTemplateColumns: { md: '1fr 2fr' }, w: 'full' })}>
         <div class={stack()}>
           <LeftPanel client:load transition:name="left-panel" />
         </div>
-        <div class={css({ aspectRatio: '8.5 / 13' })}>
-          <Button
-            ><ArrowLeftIcon /> Back
-            <LinkOverlay href="/" />
-          </Button>
-          <PDF client:only="react" />
+        <div class={stack()}>
+          <Box>
+            <Button
+              ><ArrowLeftIcon /> Back
+              <LinkOverlay href="/" />
+            </Button>
+          </Box>
+
+          <div class={css({ aspectRatio: '8.5 / 13' })}>
+            <PDF client:only="react" />
+          </div>
         </div>
       </div>
     </div>

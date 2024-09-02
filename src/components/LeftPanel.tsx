@@ -32,7 +32,7 @@ const LeftPanel: Component = () => {
         <Heading as="h1" size="4xl" fontWeight="bold">
           Kevin Mui
         </Heading>
-        <Heading as="h2" size="lg" color="fg.muted">
+        <Heading as="h2" size="lg" color="fg.muted" textAlign={{ base: 'center', md: 'start' }}>
           Software Engineer / Full Stack Engineer
         </Heading>
       </Stack>
@@ -73,10 +73,10 @@ const LeftPanel: Component = () => {
         knowledge that enables me to drive innovation and deliver exceptional results.
       </Text>
 
-      <HStack alignItems="center">
+      {/* <HStack alignItems="center">
         <MoonIcon />
         <Text>Dark</Text>
-      </HStack>
+      </HStack> */}
       <Box>
         <Button variant="outline" onClick={() => setIsRouting(true)}>
           <Show when={!isRouting()} fallback={<Spinner />}>
