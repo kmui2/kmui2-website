@@ -180,15 +180,6 @@ const ResumeDocument = () => {
           </Handle>
         </View>
         <Section>
-          <Heading1>EDUCATION</Heading1>
-          <Header
-            name="University of Wisconsin-Madison | 3.75/4.0 GPA"
-            role="B.S. Computer Science & Computer Engineering | Graduated with Distinction"
-            period="Sept 2015 - May 2019"
-            location="Madison, WI"
-          />
-        </Section>
-        <Section>
           <Heading1>EXPERIENCE</Heading1>
           {content.experience.map((exp) => (
             <View key={exp.company} style={{ marginBottom: 10 }}>
@@ -246,6 +237,15 @@ const ResumeDocument = () => {
               <Text style={{ fontSize: 12 }}>{content.skills}</Text>
             </View>
           </BulletPoint>
+        </Section>
+        <Section>
+          <Heading1>EDUCATION</Heading1>
+          <Header
+            name="University of Wisconsin-Madison | 3.75/4.0 GPA"
+            role="B.S. Computer Science & Computer Engineering | Graduated with Distinction"
+            period="Sept 2015 - May 2019"
+            location="Madison, WI"
+          />
         </Section>
         <View style={{ marginTop: 'auto', flexDirection: 'row', width: '100%' }}>
           <Text style={{ marginLeft: 'auto', fontSize: 10, fontStyle: 'italic' }}>
