@@ -1,0 +1,13 @@
+At CME Group, I was initially leading a project using Spring Batch to handle a high-volume data processing workflow. Given its success with smaller, sequential tasks in the past, it seemed like the right choice. However, as the project progressed, the data volume and complexity increased, and Spring Batch began to show performance bottlenecks. Processing times became excessively long, and our architecture wasn’t scaling as needed. After analyzing the issues, I realized that continuing with Spring Batch would compromise the project’s success.
+
+I made the decision to switch to Apache Spark, which is better suited for distributed, large-scale data processing. While this was a significant change, Spark’s parallel processing capabilities addressed our scalability challenges. Although transitioning required refactoring our codebase and training some team members, the switch resulted in a 50% reduction in processing time, allowing us to meet deadlines and handle the growing data volumes. This experience taught me the importance of reassessing decisions and pivoting when a better solution presents itself.
+
+At CME Group, our team originally had a daily on-call rotation with both a primary and secondary engineer. While this ensured coverage, it caused significant handoff complications. The daily transitions meant that incidents were frequently handed off mid-resolution, which led to miscommunication, lack of context, and delays in addressing issues. Engineers found it difficult to maintain continuity when they had to quickly get up to speed on incidents, only to pass them off the next day, which created inefficiencies and frustration within the team.
+
+To address these challenges, I proposed switching to a weekly on-call schedule with only a primary engineer. This would eliminate the frequent handoffs and give the on-call engineer full ownership of incidents for the entire week. After discussing the benefits with the team, we implemented the change, and it significantly improved the process. The weekly rotation allowed engineers to dive deeper into incidents without worrying about daily transitions, reduced miscommunication, and led to faster resolution times. It also boosted team morale, as engineers could focus more on their project work without the constant disruptions from daily rotations.
+
+**Scenario with a Manager:**
+
+**Manager**: "We might need to shift priorities and change direction on this project."
+
+**You**: "Changing direction is like adjusting sails on a ship mid-journey. We still have the same destination, but we need to navigate the wind and waves that come our way."

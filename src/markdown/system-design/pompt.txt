@@ -1,0 +1,39 @@
+Design Google and use the below format. Output in markdown format in a code snippet, use the right language for triple ticks, and escape triple ticks within the markdown with backslash \ (like \``` or \```json)
+
+# Requirements
+
+## Functional
+
+## Non-functional (e.g. # of Users, Data Sizes and Rates, Availability, Horizontal Scalability)
+
+## Assumptions or Out of Scope (e.g. Verified Authenticated by External Service (Auth0) and Analytics)
+
+# API
+
+## Endpoints with Use Case (Omitting Request/Response Bodies in a Bullet Point List)
+
+## Real-time Feedback (If Any)
+
+## Object structures (in a List and in JSON Format)
+
+# High-level Design
+
+## Clients
+
+## Load Balancer/API Gateway/CDN
+
+## Services
+
+## Services Communication (Such As Topics and Queues)
+
+## Tradeoffs
+
+# SQL and NoSQL DBs
+
+## Databases Used (SQL and/or NoSQL Databases)
+
+## Schemas
+
+## DB Caching Performance and Cache Invalidation Strategies
+
+### Inconsistency/Resource/Complexity Tradeoffs

@@ -1,0 +1,9 @@
+In meetings, I contribute by keeping discussions focused and ensuring we’re aligned on our objectives. For example, during daily standups, if I’m working on optimizing a data pipeline for our equities products, I provide a concise update on my progress, such as reducing query execution time by 15%. I also raise any blockers, like an unexpected delay in API integration, and offer assistance if a teammate is facing similar issues. In backlog refinement sessions, when working with the Product Owner, I might suggest re-prioritizing tasks based on our upcoming regulatory deadlines or point out technical limitations, helping the team focus on high-impact work. For instance, I’ve recommended breaking down a large feature request into smaller, deployable pieces so we can deliver incremental value more quickly.
+
+During sprint reviews, if I’ve implemented a critical API for real-time risk analysis, I walk through the solution, explaining any challenges, like optimizing data ingestion from third-party APIs, and how we overcame them. I encourage stakeholders to give feedback on the functionality, which can help improve future iterations. In retrospectives, I often highlight both technical and process improvements. For example, after realizing that our test coverage was causing delays in deployment, I suggested we adopt more targeted test automation, which significantly reduced our cycle times. These examples show how I actively contribute to both the technical and collaborative aspects of our meetings to keep the team efficient and aligned.
+
+**Scenario with a Scrum Master:**
+
+**Scrum Master**: "How do you feel about our current meeting structure?"
+
+**You**: "I think of meetings like pit stops in a race. They should be short and efficient, just enough time to refuel and get back on track. We’ve done well, but we can always improve on keeping things focused."
